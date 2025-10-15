@@ -1,0 +1,8 @@
+{
+  "short_name": "Sameer Portfolio",
+  "name": "Sameer Portfolio React App",
+  "start_url": "./index",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
