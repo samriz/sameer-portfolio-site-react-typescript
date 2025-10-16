@@ -3,13 +3,19 @@ import jQueryConfirm from "./modal";
 import {FormInput} from "./forminputs";
 import {EmailRegex} from "../constants/regex";
 
-export default class ContactForm extends React.Component
+interface ContactFormState {
+    name: string;
+    email: string;
+    message: string;
+}
+
+export default class ContactForm extends React.Component<ContactFormState>
 {  
-    constructor(props)
+    state: ContactFormState = {name: "", email: "", message: ""};
+    /* constructor(props: any)
     {
-        super(props);
-        this.state = { name: "", email: "", message: "" };
-    }
+        super(props); 
+    } */
 
     render()
     {
@@ -48,29 +54,33 @@ export default class ContactForm extends React.Component
 
     componentDidMount()
     {
-        document.getElementById("contactName").required = true;
-        document.getElementById("contactEmail").required = true;
-        document.getElementById("contactMessage").required = true;
-        document.getElementById("trPhone").hidden = true;
+        const contactName = document.getElementById("contactName") as HTMLInputElement;
+        contactName.required = true;
+
+        const contactEmail = document.getElementById("contactEmail") as HTMLInputElement;
+        contactEmail.required = true;
+
+        const contactMessage = document.getElementById("contactMessage") as HTMLInputElement;
+        contactMessage.required = true;
+        
+        document.getElementById("trPhone")!.hidden = true;
     }
 
-    /**
-     * @param {Event} e
-    */
-    formSubmit = async (e) => 
+    formSubmit = async (e: React.FormEvent) => 
     {
         e.preventDefault();
-        let nameInput = document.getElementById("contactName");
-        let emailInput = document.getElementById("contactEmail");
-        let messageInput = document.getElementById("contactMessage");
+        let nameInput = document.getElementById("contactName") as HTMLInputElement;
+        let emailInput = document.getElementById("contactEmail") as HTMLInputElement;
+        let messageInput = document.getElementById("contactMessage") as HTMLInputElement;
 
         this.setState({name: nameInput.value, email: emailInput.value, message: messageInput.value});
 
-        if(document.getElementById("contactPhone").value.length === 0)
+        let contactPhone = document.getElementById("contactPhone") as HTMLInputElement;
+        if(contactPhone.value.length === 0)
         {
             if(this.isValid(nameInput, 100) && this.isValidEmail(this.state.email) && this.isValid(messageInput, 1000))
             {
-                let form = document.getElementById("contactForm");
+                let form = document.getElementById("contactForm") as HTMLFormElement;
                 let formData = new FormData(form);
 
                 /* for (const value of formData.values()) 
@@ -101,12 +111,7 @@ export default class ContactForm extends React.Component
         }        
     }  
 
-    /**
-    * @param {HTMLElement} elem
-    * @param {number} maxLength
-    * @returns boolean
-    */
-    isValid = (elem, maxLength) =>
+    isValid = (elem: HTMLInputElement, maxLength: number) : boolean =>
     {
         let validName = false;
         if(elem.value.length > 2 || elem.value.length < maxLength) validName = true;
@@ -114,29 +119,18 @@ export default class ContactForm extends React.Component
         return validName;
     }
 
-    /**
-    * @param {string} email
-    * @returns boolean
-    */
-    isValidEmail = (email) =>
+    isValidEmail = (email: string): boolean =>
     {            
         let validEmail = false;
-        //let indexOfAt = 0;
-        //let indexOfDot = 0;
 
         if(typeof email === "string")
         {
-            /* if(email.includes('@')) indexOfAt = email.search('@');
-            if(email.includes('.')) indexOfDot = email.indexOf('.');
-            if(indexOfDot > indexOfAt + 1) validEmail = true; */
             validEmail = EmailRegex.test(email);
             console.log("Valid email: " + validEmail);
         }
 
-        let span = document.getElementById("spanInvalidEmail");
-        //if(validEmail === false) span.hidden = false;
-        //else span.hidden = true;        
-        span.hidden = validEmail;
+        let span = document.getElementById("spanInvalidEmail");      
+        span!.hidden = validEmail;
 
         return validEmail;
     }
