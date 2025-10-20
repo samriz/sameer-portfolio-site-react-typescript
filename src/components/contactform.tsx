@@ -78,7 +78,7 @@ export default class ContactForm extends React.Component<ContactFormState>
         let contactPhone = document.getElementById("contactPhone") as HTMLInputElement;
         if(contactPhone.value.length === 0)
         {
-            if(this.isValid(nameInput, 100) && this.isValidEmail(this.state.email) && this.isValid(messageInput, 1000))
+            if(this.isValid(nameInput, 100) && this.isValidEmail(emailInput.value) && this.isValid(messageInput, 1000))
             {
                 let form = document.getElementById("contactForm") as HTMLFormElement;
                 let formData = new FormData(form);
