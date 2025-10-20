@@ -48,18 +48,15 @@ export class Index extends React.Component
     }
 }
 
-export class App extends React.Component
+function App()
 {
-    render()
-    {
-        return (
-            <BrowserRouter>
-                <Routes>
-                    <Route index element={<Index/>}/>
-                </Routes>
-            </BrowserRouter>
-        );
-    }
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route index element={<Index/>}/>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 // create the root using the element of id "root" in index.html
