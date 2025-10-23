@@ -60,11 +60,17 @@ export default class About extends React.Component
                         <table id="employmenttable" cellSpacing="5" cellPadding="5" width="90%" border="0">
                         <tbody>
                             <tr valign="TOP">
-                                <td>2022-Present</td> 
+                                <td>2022-2025</td> 
                                 <td>
                                     <strong>Consilio &mdash; Remote</strong><br/>              
                                     <strong>Software Engineer</strong>
-                                    <br/>                        
+                                    <br/>
+                                    <ul>
+                                        <li>Researched, diagnosed, troubleshooted, and identified solutions to resolve software application issues associated with Consilio’s web-based eDiscovery platform, “Sightline”.</li>
+                                        <li>Collaborated with team members to maintain and improve the components of Sightline.</li>
+                                        <li>Identified areas of improvement related to the efficiency of Sightline and saw it through all phases of the project lifecycle: requirements gathering, solution design, application development, and testing.</li>
+                                        <li>Leveraged agile methodologies like Scrum and full stack development in ASP.NET MVC, C#, JavaScript, and SQL to bring about solutions for law firms and their clients.</li>
+                                    </ul>                        
                                 </td>
                             </tr>
                             <tr valign="TOP">
@@ -74,13 +80,13 @@ export default class About extends React.Component
                                     <strong>Web Developer</strong>
                                     <br/>     
                                     <ul>
-                                        <li>New development and maintenance of ASP.NET web applications including applications built using MVC and Webforms frameworks; languages that include C#, VB.NET, JavaScript (Vanilla and jQuery), HTML, VBScript, and razor; and MySQL and Microsoft SQL Server databases for data storage</li>
-                                        <li>Utilize Git and Subversion for Version Control</li>
-                                        <li>Development of custom solutions related to proprietary web-based CMS called “<a href="https://www.spinutech.com/dev/cms/spinternet/" target="_blank" title="Content Management System (CMS) by Spinutech" rel="noopener noreferrer">Spinternet</a>”</li>
-                                        <li>Coordinate with Project Managers to deliver products and solutions to clients</li>
-                                        <li>Collaborate with other developers/team members to improve efficiency and timely delivery of solutions</li>
-                                        <li>Write clean, consistent code matching established guidelines and patterns</li>
-                                        <li>Leverage work, from website maintenance tasks to new development on existing sites, for several different clients and deliver quality solutions within deadlines</li>
+                                        <li>New development and maintenance of ASP.NET web applications including applications built using MVC and Webforms frameworks; languages that include C#, VB.NET, JavaScript (Vanilla and jQuery), HTML, VBScript, and razor; and MySQL and Microsoft SQL Server databases for data storage.</li>
+                                        <li>Utilized Git and Subversion for Version Control.</li>
+                                        <li>Development of custom solutions related to proprietary web-based CMS called “<a href="https://www.spinutech.com/dev/cms/spinternet/" target="_blank" title="Content Management System (CMS) by Spinutech" rel="noopener noreferrer">Spinternet</a>”.</li>
+                                        <li>Coordinated with Project Managers to deliver products and solutions to clients.</li>
+                                        <li>Collaborated with other developers/team members to improve efficiency and timely delivery of solutions.</li>
+                                        <li>Wrote clean, consistent code matching established guidelines and patterns.</li>
+                                        <li>Leveraged work, from website maintenance tasks to new development on existing sites, for several different clients and deliver quality solutions within deadlines.</li>
                                     </ul>
                                 </td>
                             </tr>
@@ -91,10 +97,10 @@ export default class About extends React.Component
                                     <strong>Junior Software Developer</strong>
                                     <br/>     
                                     <ul>
-                                        <li>Assisted in new development and maintenance of ASP.NET MVC e-commerce website (C# as back-end)</li>
+                                        <li>Assisted in new development and maintenance of ASP.NET MVC e-commerce website (C# as back-end).</li>
                                         <li>New development included implementing HTML forms with client-side and server-side validation, implementing asynchronous operations in controller, retrieving information (using ADO.NET Entity Data Models and LINQ) from SQL Server database, etc.</li>
-                                        <li>Maintenance included product support by responding to user requests and investigating user concerns</li>
-                                        <li>Other tasks included code refactorings and adding comments in code files</li>
+                                        <li>Maintenance included product support by responding to user requests and investigating user concerns.</li>
+                                        <li>Other tasks included code refactorings and adding comments in code files.</li>
                                     </ul>
                                 </td>
                             </tr>
@@ -106,9 +112,9 @@ export default class About extends React.Component
                                     <strong>Information Systems Specialist</strong>
                                     <br/>      
                                     <ul>
-                                        <li>Constructed a separate <q>Configurator</q> &mdash; an application that allows Sales and Engineering to configure any product offered by the company, generate quotes and sales orders - for each product offered by the company </li>
-                                        <li>Tested inside of Microsoft Dynamics which is the platform used to launch the <q>Configurator</q>, while providing Microsoft Dynamics training to end users </li>
-                                        <li>Interacted, introduced, and reviewed requirements with Sales, Engineering and Production departments to ensure proper solution is delivered in a timely manner</li>
+                                        <li>Constructed a separate <q>Configurator</q> &mdash; an application that allows Sales and Engineering to configure any product offered by the company, generate quotes and sales orders - for each product offered by the company.</li>
+                                        <li>Tested inside of Microsoft Dynamics which is the platform used to launch the <q>Configurator</q>, while providing Microsoft Dynamics training to end users.</li>
+                                        <li>Interacted, introduced, and reviewed requirements with Sales, Engineering and Production departments to ensure proper solution is delivered in a timely manner.</li>
                                     </ul>
                                 </td> 
                             </tr>
@@ -120,10 +126,10 @@ export default class About extends React.Component
                                     <strong>Software Development Intern</strong>
                                     <br/>      
                                     <ul>
-                                        <li>Built ASP.NET webforms application (C# for backend) for a Microsoft SQL Server database</li>
-                                        <li>Hosted web application on Windows Server 2012 via IIS</li>
-                                        <li>Designed barcode labels using Zebra Designer Pro software</li>
-                                        <li>Answered help desk tickets and addressed any technical employee concerns related to software and/or hardware</li>
+                                        <li>Built ASP.NET webforms application (C# for backend) for a Microsoft SQL Server database.</li>
+                                        <li>Hosted web application on Windows Server 2012 via IIS.</li>
+                                        <li>Designed barcode labels using Zebra Designer Pro software.</li>
+                                        <li>Answered help desk tickets and addressed any technical employee concerns related to software and/or hardware.</li>
                                     </ul>
                                 </td> 
                             </tr>
@@ -135,9 +141,9 @@ export default class About extends React.Component
                                     <strong>I.T. Intern</strong>
                                     <br/>      
                                     <ul>
-                                        <li>Developed interactive reports using Cognos Report Studio and tested them for format and/or data defects </li>
-                                        <li>Learned SQL in order to write queries via Rapid SQL and facilitated in debugging and fixing C# code that caused an application to crash</li>
-                                        <li>Used various Microsoft Office applications to collaborate and complete tasks </li>
+                                        <li>Developed interactive reports using Cognos Report Studio and tested them for format and/or data defects.</li>
+                                        <li>Learned SQL in order to write queries via Rapid SQL and facilitated in debugging and fixing C# code that caused an application to crash.</li>
+                                        <li>Used various Microsoft Office applications to collaborate and complete tasks.</li>
                                     </ul>
                                 </td> 
                             </tr>
@@ -160,6 +166,7 @@ export default class About extends React.Component
                                             <li className="floatinglist">HTML</li>
                                             <li className="floatinglist">CSS</li>
                                             <li className="floatinglist">JavaScript</li>
+                                            <li className="floatinglist">TypeScript</li>
                                             <li className="floatinglist">C#</li>
                                             <li className="floatinglist">Visual Basic</li>
                                         </ul>
@@ -176,8 +183,8 @@ export default class About extends React.Component
                                         <ul>
                                             <li className="floatinglist">JavaScript Libraries
                                                 <ul>
-                                                    <li>jQuery</li>
                                                     <li>React (this site is built using React)</li>
+                                                    <li>jQuery</li>                                                    
                                                 </ul>
                                             </li>
                                             <li className="floatinglist">ASP.NET
