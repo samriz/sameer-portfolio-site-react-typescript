@@ -1,5 +1,5 @@
 import React from 'react';
-import FormGroupItem from "./formgroupitem";
+import FormGroupItem from "./formgroupitem.tsx";
 
 export class FormInput extends React.Component
 {
