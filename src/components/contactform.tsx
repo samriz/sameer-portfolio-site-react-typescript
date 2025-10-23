@@ -4,18 +4,18 @@ import {FormInput} from "./forminputs";
 import {EmailRegex} from "../constants/regex";
 
 interface ContactFormState {
-    name: string;
-    email: string;
-    message: string;
+    nameInput: any;
+    emailInput: any;
+    messageInput: any;
 }
 
 export default class ContactForm extends React.Component<ContactFormState>
 {  
-    state: ContactFormState = {name: "", email: "", message: ""};
-    /* constructor(props: any)
-    {
-        super(props); 
-    } */
+    state: ContactFormState = {
+        nameInput: null, 
+        emailInput:  null, 
+        messageInput:  null
+    };
 
     render()
     {
@@ -69,16 +69,28 @@ export default class ContactForm extends React.Component<ContactFormState>
     formSubmit = async (e: React.FormEvent) => 
     {
         e.preventDefault();
-        let nameInput = document.getElementById("contactName") as HTMLInputElement;
-        let emailInput = document.getElementById("contactEmail") as HTMLInputElement;
-        let messageInput = document.getElementById("contactMessage") as HTMLInputElement;
+        let name = document.getElementById("contactName") as HTMLInputElement;
+        let email = document.getElementById("contactEmail") as HTMLInputElement;
+        let message = document.getElementById("contactMessage") as HTMLInputElement;
 
-        this.setState({name: nameInput.value, email: emailInput.value, message: messageInput.value});
+        //this.setState({nameInput: name, emailInput: email, messageInput: message});
+        //await this.setStateAndSubmitForm(name, email, message);
+
+        //use callback in setState() to wait for state to update before proceeding
+        this.setState({nameInput: name, emailInput: email, messageInput: message}, async () => {
+            await this.setStateAndSubmitForm(name, email, message);
+        });     
+    }
+
+    setStateAndSubmitForm = async (name: HTMLInputElement, email: HTMLInputElement, message: HTMLInputElement) => {
+        /* console.log("State name: " + this.state.nameInput.value);
+        console.log("State email: " + this.state.emailInput.value);
+        console.log("State message: " + this.state.messageInput.value); */
 
         let contactPhone = document.getElementById("contactPhone") as HTMLInputElement;
         if(contactPhone.value.length === 0)
         {
-            if(this.isValid(nameInput, 100) && this.isValidEmail(emailInput.value) && this.isValid(messageInput, 1000))
+            if(this.isValid(this.state.nameInput, 100) && this.isValidEmail(this.state.emailInput.value) && this.isValid(this.state.messageInput, 1000))
             {
                 let form = document.getElementById("contactForm") as HTMLFormElement;
                 let formData = new FormData(form);
@@ -87,7 +99,7 @@ export default class ContactForm extends React.Component<ContactFormState>
                 {
                     console.log(value);
                 } */
-                
+                    
                 let response = await fetch("/", {
                     method: "POST",
                     body: formData
@@ -96,20 +108,20 @@ export default class ContactForm extends React.Component<ContactFormState>
                 let modal = new jQueryConfirm();
                 if(response.ok) 
                 {
-                    nameInput.value = "";
-                    emailInput.value = "";
-                    messageInput.value = "";
-                    this.setState({name: "", email: "", message: ""});
+                    name.value = "";
+                    email.value = "";
+                    message.value = "";
+                    this.setState({nameInput: "", emailInput: "", messageInput: ""});
 
                     modal.setModalContent("Message sent!");
                 }
                 else modal.setModalContent("Message could not be sent.");
-            
+                
                 modal.createModal();
                 modal.getModal().open();
             }
-        }        
-    }  
+        }
+    }
 
     isValid = (elem: HTMLInputElement, maxLength: number) : boolean =>
     {
@@ -123,7 +135,7 @@ export default class ContactForm extends React.Component<ContactFormState>
     {            
         let validEmail = false;
         
-        if(typeof email === "string")
+        if(typeof email === "string" && email.length > 0)
         {
             validEmail = EmailRegex.test(email);
             console.log("Valid email: " + validEmail);
