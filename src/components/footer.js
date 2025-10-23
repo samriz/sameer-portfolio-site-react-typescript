@@ -1,5 +1,5 @@
 import React from "react";
-import SocialMediaBanner from "./socialmediabanner";
+import SocialMediaBanner from "./socialmediabanner.tsx";
 
 export default class Footer extends React.Component
 {
