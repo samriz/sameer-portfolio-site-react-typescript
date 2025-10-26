@@ -15,12 +15,11 @@ export class Index extends React.Component
     constructor(props)
     {
         super(props);
-        this.state = { viewportWidth: 0 };
+        this.state = { viewportWidth: window.visualViewport.width };
     }
 
     render()
     {
-        this.setState({viewportWidth: window.visualViewport.width});
         if(this.state.viewportWidth > 640)
         {
             return (
@@ -45,6 +44,13 @@ export class Index extends React.Component
                 </>
             );
         }
+    }
+
+    componentDidMount()
+    {
+        window.addEventListener("resize", () => {
+            this.setState({viewportWidth: window.visualViewport.width});
+        });
     }
 }
 
