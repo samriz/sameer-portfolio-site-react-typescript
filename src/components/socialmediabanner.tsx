@@ -1,5 +1,4 @@
-import "./icons";
-import { GitHubIcon, LinkedInIcon } from './icons';
+import { GitHubIcon, LinkedInIcon } from './icons.tsx';
 
 export default function SocialMediaBanner()
 {

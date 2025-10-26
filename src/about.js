@@ -3,7 +3,7 @@ import PageTemplate from "./pagetemplate";
 import LinkedInPicture from "./misc/LinkedInPicture1.png";
 import Resume from "./misc/SameerRizviResume2025.pdf";
 import { DownloadButton } from './components/buttons.tsx';
-import { ExternalUrlArrow } from './components/icons';
+import { ExternalUrlArrow } from './components/icons.tsx';
 import { HashLink } from 'react-router-hash-link';
 
 export default class About extends React.Component
