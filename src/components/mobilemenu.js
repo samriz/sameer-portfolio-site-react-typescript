@@ -1,5 +1,5 @@
 import React from "react";
-import { MobileMenuItem } from "./menuitem";
+import { MobileMenuItem } from "./menuitem.tsx";
 
 export default class MobileMenu extends React.Component
 {

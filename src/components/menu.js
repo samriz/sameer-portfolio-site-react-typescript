@@ -1,5 +1,5 @@
 import React from "react";
-import { DesktopMenuItem } from "./menuitem";
+import { DesktopMenuItem } from "./menuitem.tsx";
 
 export default class Menu extends React.Component
 {
