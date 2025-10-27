@@ -22,6 +22,7 @@ export default class ContactForm extends React.Component<ContactFormState>
         return (
         <form id={"contactForm"} name={"contact"} onSubmit={this.formSubmit}>
             <table id={"contactTable"}>                
+            <tbody>
                 <tr>
                     <td>
                         <FormInput type="text" id="contactName" name="name" placeholder="Name" minLength={2} maxLength={100}/>
@@ -46,7 +47,8 @@ export default class ContactForm extends React.Component<ContactFormState>
                     <td>
                         <button type="submit" className="btn btn-outline-secondary">Send</button>
                     </td>
-                </tr>                             
+                </tr>
+            </tbody>                             
             </table>       
             <input type="hidden" name="form-name" value="contact"/>
         </form>);
