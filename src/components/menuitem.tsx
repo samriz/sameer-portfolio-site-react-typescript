@@ -2,7 +2,7 @@ import { HashLink } from 'react-router-hash-link';
 
 interface MenuItemProps
 {
-    className: string;
+    className?: string;
     href: string;
     text: string;    
 }

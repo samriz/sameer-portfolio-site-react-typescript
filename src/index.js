@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Menu from "./components/menu";
-import MobileMenu from './components/mobilemenu';
+import Menu from "./components/menu.tsx";
+import MobileMenu from './components/mobilemenu.tsx';
 import Home from "./home";
 import About from "./about";
 import Contact from "./contact";

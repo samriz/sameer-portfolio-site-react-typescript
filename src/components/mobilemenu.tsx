@@ -38,7 +38,7 @@ export default class MobileMenu extends React.Component
 
     componentDidMount()
     {
-        let hamburgerList = document.getElementById("hamburgerList");
+        let hamburgerList = document.getElementById("hamburgerList") as HTMLUListElement;
         hamburgerList.hidden = true;
 
         //add an event listener to the document and if something is clicked on the document and it is not the hamburger button then hide the hamburger list
@@ -52,7 +52,7 @@ export default class MobileMenu extends React.Component
 
     showOrHideList = () => 
     {
-        let hamburgerList = document.getElementById("hamburgerList");
+        let hamburgerList = document.getElementById("hamburgerList") as HTMLUListElement;
         if(hamburgerList.hidden === true) hamburgerList.hidden = false;
         else hamburgerList.hidden = true;
     }
