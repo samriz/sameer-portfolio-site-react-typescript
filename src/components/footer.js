@@ -6,7 +6,7 @@ export default class Footer extends React.Component
     render()
     {
         return (
-          <footer style={{textAlign: "center",}}>
+          <footer>
             <hr/>
               <div>
                 <SocialMediaBanner/>
