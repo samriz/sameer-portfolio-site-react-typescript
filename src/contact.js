@@ -1,5 +1,5 @@
 import React from 'react';
-import PageTemplate from "./pagetemplate";
+import PageTemplate from "./pagetemplate.tsx";
 import ContactForm from "./components/contactform.tsx";
 import "./styles/textbox.css"
 
