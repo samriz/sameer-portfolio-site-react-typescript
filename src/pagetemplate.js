@@ -1,22 +1,16 @@
-import React from 'react';
-
-export class Intro extends React.Component
+export function Intro(props)
 {
-    render() 
-    {
-        return (<div id={this.props.header_id} className="intro jumbotron">{this.props.content}</div>);
-    }
+    return (
+        <div id={props.header_id} className="intro jumbotron">{props.content}</div>
+    );
 }
 
-export default class PageTemplate extends React.Component
+export default function PageTemplate(props)
 {
-    render()
-    {
-        return (     
-            <div className="allButFooter">
-                <Intro header_id={this.props.intro_id} content={this.props.intro_content}/>
-                <main id={this.props.main_id} className="contents">{this.props.main_content}</main>
-            </div>
-        );
-    }
+    return (     
+        <div className="allButFooter">
+            <Intro header_id={props.intro_id} content={props.intro_content}/>
+            <main id={props.main_id} className="contents">{props.main_content}</main>
+        </div>
+    );
 }
