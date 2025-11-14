@@ -6,7 +6,7 @@ import MobileMenu from './components/mobilemenu.tsx';
 import Home from "./home";
 import About from "./about";
 import Contact from "./contact.tsx";
-import Footer from "./components/footer";
+import Footer from "./components/footer.tsx";
 import "./styles/index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 

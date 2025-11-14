@@ -18,6 +18,7 @@ export default class Footer extends React.Component
 
     componentDidMount() //executed after component has been added to the DOM
     {
-      document.getElementById("fullyear").innerHTML = new Date().getFullYear();
+      let yearElement = document.getElementById("fullyear") as HTMLSpanElement;
+      yearElement.innerHTML = new Date().getFullYear().toString();
     }
 }
