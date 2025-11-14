@@ -1,7 +1,6 @@
-import React from 'react';
 import PageTemplate from "./pagetemplate.tsx";
 import ContactForm from "./components/contactform.tsx";
-import "./styles/textbox.css"
+import "./styles/textbox.css";
 
 /*class TableForm extends React.Component
 {
@@ -36,21 +35,18 @@ import "./styles/textbox.css"
     }
 }*/
 
-export default class Contact extends React.Component
+export default function Contact()
 {
-    render()
-    {
-        return (
-            <PageTemplate intro_id={"contact"} main_id={"contactMain"}
-                intro_content={<h1>Contact Me</h1>}
-                main_content={
-                    <>
-                        <p style={{textAlign:"center",}}>To contact me, please fill out and submit the form below.</p>
-                        {/* <TableForm/> */}
-                        <ContactForm/>
-                    </>
-                }
-            />
-        );
-    }
+    return (
+        <PageTemplate intro_id={"contact"} main_id={"contactMain"}
+            intro_content={<h1>Contact Me</h1>}
+            main_content={
+                <>
+                    <p style={{textAlign:"center",}}>To contact me, please fill out and submit the form below.</p>
+                    {/* <TableForm/> */}
+                    <ContactForm/>
+                </>
+            }
+        />
+    );
 }

@@ -5,7 +5,7 @@ import Menu from "./components/menu.tsx";
 import MobileMenu from './components/mobilemenu.tsx';
 import Home from "./home";
 import About from "./about";
-import Contact from "./contact";
+import Contact from "./contact.tsx";
 import Footer from "./components/footer";
 import "./styles/index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';

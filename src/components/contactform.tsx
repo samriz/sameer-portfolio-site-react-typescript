@@ -9,7 +9,7 @@ interface ContactFormState {
     messageInput: any;
 }
 
-export default class ContactForm extends React.Component<ContactFormState>
+export default class ContactForm extends React.Component<{}, ContactFormState>
 {  
     state: ContactFormState = {
         nameInput: null, 
