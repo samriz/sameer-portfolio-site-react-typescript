@@ -1,8 +1,33 @@
 import React from 'react';
 import FormGroupItem from "./formgroupitem.tsx";
 
-export class FormInput extends React.Component
+interface FormInputProps
 {
+    type: string;
+    id: string;
+    name: string;
+    placeholder?: string;
+    className?: string;
+    minLength?: number;
+    maxLength?: number;
+    rows?: number;
+    cols?: number;
+}
+
+export class FormInput extends React.Component<FormInputProps, {}>
+{
+    /* props: FormInputProps = {
+        type: "",
+        id: "",
+        name: "",
+        placeholder: "",
+        className: "",
+        minLength: 0,
+        maxLength: 0,
+        rows: 0,
+        cols: 0
+    }; */
+    
     #inputTypes = ['button', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'file', 'hidden', 'image', 'month', 'number', 'password', 'radio', 'range', 'reset', 'search', 'submit', 'tel', 'text', 'textarea', 'time', 'url', 'week'];
 
     render()
@@ -75,7 +100,7 @@ export class FormInput extends React.Component
     * @param {string} type
     * @returns boolean
     */
-    isInputTypeValid = (type) => { return this.#inputTypes.includes(type.toLowerCase()); }
+    isInputTypeValid = (type: string) => { return this.#inputTypes.includes(type.toLowerCase()); }
 }
 
 /* export class EmailFormInput extends React.Component
