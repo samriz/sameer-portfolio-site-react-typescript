@@ -48,7 +48,7 @@ export class FormInput extends React.Component
                     <FormGroupItem
                         element={
                             <>
-                                <input type={this.props.type} id={this.props.id} name={this.props.name} placeholder={this.props.placeholder} className={this.props.className} minLength={this.props.minLength} maxLength={this.props.maxLength} onChange={this.handleChange}/>
+                                <input type={this.props.type} id={this.props.id} name={this.props.name} placeholder={this.props.placeholder} className={this.props.className} minLength={this.props.minLength} maxLength={this.props.maxLength}/>
                                 <div className="underline"/>
                             </>
                         }
