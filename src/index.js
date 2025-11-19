@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./components/menu.tsx";
 import MobileMenu from './components/mobilemenu.tsx';
-import Home from "./home";
+import Home from "./home.tsx";
 import About from "./about.tsx";
 import Contact from "./contact.tsx";
 import Footer from "./components/footer.tsx";
