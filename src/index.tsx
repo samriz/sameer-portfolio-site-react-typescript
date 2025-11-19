@@ -10,12 +10,23 @@ import Footer from "./components/footer.tsx";
 import "./styles/index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export class Index extends React.Component
+interface IndexState
 {
-    constructor(props)
+    viewportWidth: number;
+}
+
+export class Index extends React.Component<{}, IndexState>
+{
+    /* state: IndexState = {
+        viewportWidth: window.visualViewport.width
+    }; */
+    
+    constructor(props: any)
     {
         super(props);
-        this.state = { viewportWidth: window.visualViewport.width };
+
+        if(window.visualViewport) this.state = { viewportWidth: window.visualViewport.width };
+        else this.state = { viewportWidth: 0 };
     }
 
     render()
@@ -49,7 +60,9 @@ export class Index extends React.Component
     componentDidMount()
     {
         window.addEventListener("resize", () => {
-            this.setState({viewportWidth: window.visualViewport.width});
+            //console.log("resizing");
+            if(window.visualViewport) this.setState({viewportWidth: window.visualViewport.width});
+            else this.setState({viewportWidth: 0});
         });
     }
 }
@@ -69,7 +82,7 @@ function App()
 // add "App" to the root
 // App renders the "Index" component at the index url
 // Index is a single page and renders all the components in the page
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLDivElement);
 root.render(
     <React.StrictMode>
         <App/>
