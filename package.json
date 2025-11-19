@@ -22,7 +22,7 @@
     "typescript": "^5.9.3",
     "web-vitals": "^2.1.4"
   },
-  "overrides":{
+  "overrides": {
     "typescript": "^5.9.3"
   },
   "scripts": {
@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-hash-link": "^2.4.9",
     "react-router-dom": "^6.4.0"
   }
 }

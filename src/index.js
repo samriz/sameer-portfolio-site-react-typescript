@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./components/menu.tsx";
 import MobileMenu from './components/mobilemenu.tsx';
 import Home from "./home";
-import About from "./about";
+import About from "./about.tsx";
 import Contact from "./contact.tsx";
 import Footer from "./components/footer.tsx";
 import "./styles/index.css";

@@ -25,8 +25,6 @@ td input, td textarea{width: 100%;}
 
 nav{height: 35px;}
 
-.roundedCorners{border-radius: 2em;}
-
 /*id selector styles*/
 
 /* #menuitem0
@@ -173,3 +171,7 @@ nav{height: 35px;}
 }
 
 .leftPad{padding-left: 5px;}
+
+.roundedCorners{border-radius: 2em;}
+
+.aboutTableRow{vertical-align: top; /* or middle, bottom, baseline */}

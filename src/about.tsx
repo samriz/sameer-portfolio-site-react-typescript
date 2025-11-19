@@ -31,9 +31,9 @@ export default class About extends React.Component
                 <div className={"leftPad"} id={"divAboutDetails"}>
                     <details>
                         <summary>Education</summary>
-                        <table id="educationtable" cellSpacing="5" cellPadding="5" width="90%" border="0">
+                        <table id="educationtable" cellSpacing="5" cellPadding="5" width="90%" border={0}>
                         <tbody>
-                            <tr valign="TOP">
+                            <tr className="aboutTableRow">
                                 <td>2021</td> 
                                 <td>
                                     Syracuse University &mdash; Syracuse, NY
@@ -42,7 +42,7 @@ export default class About extends React.Component
                                     <br/>
                                 </td>
                             </tr>
-                            <tr valign="TOP">
+                            <tr className="aboutTableRow">
                                 <td>2015</td> 
                                 <td>
                                     Loyola University Chicago &mdash; Chicago, IL 
@@ -57,9 +57,9 @@ export default class About extends React.Component
 
                     <details>
                         <summary>Professional experience</summary>
-                        <table id="employmenttable" cellSpacing="5" cellPadding="5" width="90%" border="0">
+                        <table id="employmenttable" cellSpacing="5" cellPadding="5" width="90%" border={0}>
                         <tbody>
-                            <tr valign="TOP">
+                            <tr className="aboutTableRow">
                                 <td>2022-2025</td> 
                                 <td>
                                     <strong>Consilio &mdash; Remote</strong><br/>              
@@ -73,7 +73,7 @@ export default class About extends React.Component
                                     </ul>                        
                                 </td>
                             </tr>
-                            <tr valign="TOP">
+                            <tr className="aboutTableRow">
                                 <td>2021-2022</td> 
                                 <td>
                                     <strong>Spinutech, LLC &mdash; Remote</strong><br/>              
@@ -90,7 +90,7 @@ export default class About extends React.Component
                                     </ul>
                                 </td>
                             </tr>
-                            <tr valign="TOP">
+                            <tr className="aboutTableRow">
                                 <td>2018</td> 
                                 <td>
                                     <strong>American Hotel Register Company &mdash; Vernon Hills, IL</strong><br/>              
@@ -104,7 +104,7 @@ export default class About extends React.Component
                                     </ul>
                                 </td>
                             </tr>
-                            <tr valign="TOP">
+                            <tr className="aboutTableRow">
                                 <td>2016-2018</td> 
                                 <td>
                                     <strong>ACS Group &mdash; New Berlin, WI</strong>
@@ -118,7 +118,7 @@ export default class About extends React.Component
                                     </ul>
                                 </td> 
                             </tr>
-                            <tr valign="TOP">
+                            <tr className="aboutTableRow">
                                 <td>2014-2015</td> 
                                 <td>
                                     <strong>Parker Hannifin Corporation &mdash; Lincolnshire, IL</strong> 
@@ -133,7 +133,7 @@ export default class About extends React.Component
                                     </ul>
                                 </td> 
                             </tr>
-                            <tr valign="TOP">
+                            <tr className="aboutTableRow">
                                 <td>2014</td> 
                                 <td>
                                     <strong>Northwestern Mutual &mdash; Milwaukee, WI</strong> 
@@ -153,7 +153,7 @@ export default class About extends React.Component
 
                     <details>
                         <summary>Skills</summary>
-                        <table id="skillstable" cellSpacing="5" cellPadding="5" width="90%" border="0">
+                        <table id="skillstable" cellSpacing="5" cellPadding="5" width="90%" border={0}>
                             <tbody>
                                 <thead>
                                     <tr>
