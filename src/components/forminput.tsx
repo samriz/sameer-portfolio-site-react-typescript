@@ -14,7 +14,7 @@ interface FormInputProps
     cols?: number;
 }
 
-export class FormInput extends React.Component<FormInputProps, {}>
+export class FormInput extends React.Component<FormInputProps>
 {
     /* props: FormInputProps = {
         type: "",
@@ -28,7 +28,7 @@ export class FormInput extends React.Component<FormInputProps, {}>
         cols: 0
     }; */
     
-    #inputTypes = ['button', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'file', 'hidden', 'image', 'month', 'number', 'password', 'radio', 'range', 'reset', 'search', 'submit', 'tel', 'text', 'textarea', 'time', 'url', 'week'];
+    static inputTypes = ['button', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'file', 'hidden', 'image', 'month', 'number', 'password', 'radio', 'range', 'reset', 'search', 'submit', 'tel', 'text', 'textarea', 'time', 'url', 'week'];
 
     render()
     {
@@ -37,7 +37,7 @@ export class FormInput extends React.Component<FormInputProps, {}>
 
     returnInputs = () => {
 
-        if(this.#inputTypes.includes(this.props.type.toLowerCase()))
+        if(FormInput.inputTypes.includes(this.props.type.toLowerCase()))
         {
             if(this.props.type.toLowerCase() === "email")
             {
@@ -100,7 +100,7 @@ export class FormInput extends React.Component<FormInputProps, {}>
     * @param {string} type
     * @returns boolean
     */
-    isInputTypeValid = (type: string) => { return this.#inputTypes.includes(type.toLowerCase()); }
+    isInputTypeValid = (type: string) => { return FormInput.inputTypes.includes(type.toLowerCase()); }
 }
 
 /* export class EmailFormInput extends React.Component
