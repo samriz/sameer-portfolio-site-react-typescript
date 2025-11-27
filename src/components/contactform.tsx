@@ -1,7 +1,7 @@
 import React from 'react';
 import jQueryConfirm from "./modal";
 import {FormInput} from "./forminput.tsx";
-import {EmailRegex} from "../constants/regex";
+import {EmailRegex} from "../constants/regex.ts";
 
 interface ContactFormState {
     nameInput: any;
