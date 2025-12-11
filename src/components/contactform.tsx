@@ -3,10 +3,11 @@ import jQueryConfirm from "./modal";
 import {FormInput} from "./forminput.tsx";
 import {EmailRegex} from "../constants/regex.ts";
 
-interface ContactFormState {
-    nameInput: any;
-    emailInput: any;
-    messageInput: any;
+interface ContactFormState 
+{
+    nameInput: HTMLInputElement | null;
+    emailInput: HTMLInputElement | null;
+    messageInput: HTMLInputElement | null;
 }
 
 export default class ContactForm extends React.Component<{}, ContactFormState>
@@ -85,14 +86,14 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
     }
 
     setStateAndSubmitForm = async (name: HTMLInputElement, email: HTMLInputElement, message: HTMLInputElement) => {
-        /* console.log("State name: " + this.state.nameInput.value);
-        console.log("State email: " + this.state.emailInput.value);
-        console.log("State message: " + this.state.messageInput.value); */
+        console.log("State name: " + this.state.nameInput!.value);
+        console.log("State email: " + this.state.emailInput!.value);
+        console.log("State message: " + this.state.messageInput!.value);
 
         let contactPhone = document.getElementById("contactPhone") as HTMLInputElement;
         if(contactPhone.value.length === 0)
         {
-            if(this.isValid(this.state.nameInput, 100) && this.isValidEmail(this.state.emailInput.value) && this.isValid(this.state.messageInput, 1000))
+            if(this.isValid(this.state.nameInput, 100) && this.state.emailInput !== null && this.isValidEmail(this.state.emailInput.value) && this.isValid(this.state.messageInput, 1000))
             {
                 let form = document.getElementById("contactForm") as HTMLFormElement;
                 let formData = new FormData(form);
@@ -113,7 +114,7 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
                     name.value = "";
                     email.value = "";
                     message.value = "";
-                    this.setState({nameInput: "", emailInput: "", messageInput: ""});
+                    this.setState({nameInput: null, emailInput: null, messageInput: null});
 
                     modal.setModalContent("Message sent!");
                 }
@@ -125,10 +126,13 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
         }
     }
 
-    isValid = (elem: HTMLInputElement, maxLength: number) : boolean =>
+    isValid = (elem: HTMLInputElement | null, maxLength: number) : boolean =>
     {
         let validName = false;
-        if(elem.value.length > 2 || elem.value.length < maxLength) validName = true;
+        if(elem)
+        {
+            if(elem.value.length > 2 || elem.value.length < maxLength) validName = true;
+        }
 
         return validName;
     }
@@ -137,14 +141,14 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
     {            
         let validEmail = false;
         
-        if(typeof email === "string" && email.length > 0)
+        if(email.length > 0)
         {
             validEmail = EmailRegex.test(email);
             console.log("Valid email: " + validEmail);
         }
 
-        let span = document.getElementById("spanInvalidEmail");      
-        span!.hidden = validEmail;
+        let span = document.getElementById("spanInvalidEmail") as HTMLSpanElement;      
+        span.hidden = validEmail;
 
         return validEmail;
     }
