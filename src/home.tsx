@@ -17,7 +17,7 @@ export default class Home extends React.Component
         );
     }
 
-    homeContent(): JSX.Element
+    homeContent()
     {
         return (
             <div className={"leftPad"}>
