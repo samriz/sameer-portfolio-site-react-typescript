@@ -5,17 +5,17 @@ import {EmailRegex} from "../constants/regex.ts";
 
 interface ContactFormState 
 {
-    nameInput: HTMLInputElement | null;
-    emailInput: HTMLInputElement | null;
-    messageInput: HTMLInputElement | null;
+    name: string;
+    email: string;
+    message: string;
 }
 
 export default class ContactForm extends React.Component<{}, ContactFormState>
 {  
     state: ContactFormState = {
-        nameInput: null, 
-        emailInput:  null, 
-        messageInput:  null
+        name: "", 
+        email: "", 
+        message: ""
     };
 
     render()
@@ -72,28 +72,30 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
     formSubmit = async (e: React.FormEvent) => 
     {
         e.preventDefault();
-        let name = document.getElementById("contactName") as HTMLInputElement;
-        let email = document.getElementById("contactEmail") as HTMLInputElement;
-        let message = document.getElementById("contactMessage") as HTMLInputElement;
+
+        let nameElement = document.getElementById("contactName") as HTMLInputElement;
+        let emailElement = document.getElementById("contactEmail") as HTMLInputElement;
+        let messageElement = document.getElementById("contactMessage") as HTMLInputElement;
 
         //this.setState({nameInput: name, emailInput: email, messageInput: message});
         //await this.setStateAndSubmitForm(name, email, message);
 
         //use callback in setState() to wait for state to update before proceeding
-        this.setState({nameInput: name, emailInput: email, messageInput: message}, async () => {
-            await this.setStateAndSubmitForm(name, email, message);
+        this.setState({name: nameElement.value, email: emailElement.value, message: messageElement.value}, async () => {
+            await this.sendForm(nameElement, emailElement, messageElement);
         });     
     }
 
-    setStateAndSubmitForm = async (name: HTMLInputElement, email: HTMLInputElement, message: HTMLInputElement) => {
-        console.log("State name: " + this.state.nameInput!.value);
-        console.log("State email: " + this.state.emailInput!.value);
-        console.log("State message: " + this.state.messageInput!.value);
+    sendForm = async (nameElement: HTMLInputElement, emailElement: HTMLInputElement, messageElement: HTMLInputElement) => {
+        
+        console.log("State name: " + this.state.name);
+        console.log("State email: " + this.state.email);
+        console.log("State message: " + this.state.message);
 
         let contactPhone = document.getElementById("contactPhone") as HTMLInputElement;
         if(contactPhone.value.length === 0)
         {
-            if(this.isValid(this.state.nameInput, 100) && this.state.emailInput !== null && this.isValidEmail(this.state.emailInput.value) && this.isValid(this.state.messageInput, 1000))
+            if(this.isValid(this.state.name, 100) && this.isValidEmail(this.state.email) && this.isValid(this.state.message, 1000))
             {
                 let form = document.getElementById("contactForm") as HTMLFormElement;
                 let formData = new FormData(form);
@@ -111,10 +113,9 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
                 let modal = new jQueryConfirm();
                 if(response.ok) 
                 {
-                    name.value = "";
-                    email.value = "";
-                    message.value = "";
-                    this.setState({nameInput: null, emailInput: null, messageInput: null});
+                    nameElement.value = "";
+                    emailElement.value = "";
+                    messageElement.value = "";
 
                     modal.setModalContent("Message sent!");
                 }
@@ -124,15 +125,16 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
                 modal.getModal().open();
             }
         }
+        console.log("State name: " + this.state.name);
+        console.log("State email: " + this.state.email);
+        console.log("State message: " + this.state.message);
     }
 
-    isValid = (elem: HTMLInputElement | null, maxLength: number) : boolean =>
+    isValid = (elem: string, maxLength: number) : boolean =>
     {
         let validName = false;
-        if(elem)
-        {
-            if(elem.value.length > 2 || elem.value.length < maxLength) validName = true;
-        }
+
+        if(elem.length > 2 || elem.length < maxLength) validName = true;        
 
         return validName;
     }
