@@ -4,6 +4,11 @@ footer
 {
     text-align: center;
     font-size: .75rem;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
 }
 
 img
