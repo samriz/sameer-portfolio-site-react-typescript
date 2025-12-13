@@ -88,9 +88,9 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
 
     sendForm = async (nameElement: HTMLInputElement, emailElement: HTMLInputElement, messageElement: HTMLInputElement) => {
         
-        console.log("State name: " + this.state.name);
+        /* console.log("State name: " + this.state.name);
         console.log("State email: " + this.state.email);
-        console.log("State message: " + this.state.message);
+        console.log("State message: " + this.state.message); */
 
         let contactPhone = document.getElementById("contactPhone") as HTMLInputElement;
         if(contactPhone.value.length === 0)
@@ -125,9 +125,9 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
                 modal.getModal().open();
             }
         }
-        console.log("State name: " + this.state.name);
+        /* console.log("State name: " + this.state.name);
         console.log("State email: " + this.state.email);
-        console.log("State message: " + this.state.message);
+        console.log("State message: " + this.state.message); */
     }
 
     isValid = (elem: string, maxLength: number) : boolean =>
