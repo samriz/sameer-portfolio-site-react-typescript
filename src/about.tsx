@@ -16,7 +16,7 @@ export default class About extends React.Component
             <h1>About</h1>
                 <>
                     <figure>
-                        <img src={LinkedInPicture} id="profilepic" className="center" alt="Sameer Rizvi" loading="lazy"/>
+                        <img src={LinkedInPicture} id="profilepic" className="center"title="Sameer Rizvi" alt="Sameer Rizvi" loading="lazy"/>
                         <figcaption>
                             <HashLink smooth to="/#contact" className="textlink" title="Contact">Contact me</HashLink>
                             <br></br>
