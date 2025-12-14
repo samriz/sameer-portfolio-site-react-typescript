@@ -43,6 +43,8 @@ nav{height: 35px;}
     margin-right: auto;
 }
 
+#contactForm{padding-bottom: 150px;}
+
 #divAboutDetails td
 {
     border-style: solid;
