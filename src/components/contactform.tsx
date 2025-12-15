@@ -26,12 +26,12 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
             <tbody>
                 <tr>
                     <td>
-                        <FormInput type="text" id="contactName" name="name" placeholder="Name" minLength={2} maxLength={100}/>
+                        <FormInput type="text" id="contactName" name="name" placeholder="Name" className="form-control" minLength={2} maxLength={100}/>
                     </td>                                       
                 </tr>
                 <tr>
                     <td>
-                        <FormInput type="email" id="contactEmail" name="email" placeholder="Email" minLength={2} maxLength={50}/>
+                        <FormInput type="email" id="contactEmail" name="email" placeholder="Email" className="form-control" minLength={2} maxLength={50}/>
                     </td> 
                 </tr>
                 <tr id={"trPhone"}>
