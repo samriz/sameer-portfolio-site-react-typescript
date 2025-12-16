@@ -2,13 +2,16 @@ a:link,a:visited{text-decoration: none;}
 
 footer
 {
-    text-align: center;
-    font-size: .75rem;
-    position: fixed; 
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
+  text-align: center;
+  font-size: .75rem;
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: initial;
 }
 
 img
@@ -99,10 +102,15 @@ nav{height: 35px;}
   color: #faf6f6;
 } */
 
+#socialMediaBannerDiv
+{
+  padding-top: 25px;
+}
+
 .floatinglist 
 {
-    float: left;
-    margin: 0 20px;
+  float: left;
+  margin: 0 20px;
 }
 
 .errortext{color: red;}
@@ -118,11 +126,11 @@ nav{height: 35px;}
 
 .menu
 {
-    position: sticky;
-    top: 0;
-    /* background: white;
-    width: 100%;
-    border-style: outset; */
+  position: sticky;
+  top: 0;
+  /* background: white;
+  width: 100%;
+  border-style: outset; */
 }
 
 .menuItem
@@ -173,8 +181,8 @@ nav{height: 35px;}
 
 .hamburgerListItem
 {
-    text-align: center;
-    border-bottom: 1px solid; 
+  text-align: center;
+  border-bottom: 1px solid; 
 }
 
 .leftPad{padding-left: 5px;}

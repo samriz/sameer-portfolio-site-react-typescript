@@ -3,7 +3,7 @@ import { GitHubIcon, LinkedInIcon } from './icons.tsx';
 export default function SocialMediaBanner()
 {
     return (
-        <div>
+        <div id="socialMediaBannerDiv">
             <a href="https://www.linkedin.com/in/sameer-r-bb788375/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
             <LinkedInIcon/>
             </a>

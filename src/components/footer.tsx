@@ -7,7 +7,7 @@ export default class Footer extends React.Component
     {
         return (
           <footer>
-            <hr/>
+            {/* <hr/> */}
               <div>
                 <SocialMediaBanner/>
                 <p>Copyright &copy; <span id="fullyear"></span> Sameer Rizvi</p>
