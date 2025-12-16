@@ -29,7 +29,7 @@ export default class About extends React.Component
         main_content={
             <>
                 <div className={"leftPad"} id={"divAboutDetails"}>
-                    <details>
+                    <details className="aboutDetails">
                         <summary>Education</summary>
                         <table id="educationtable" cellSpacing="5" cellPadding="5" width="90%" border={0}>
                         <tbody>
@@ -55,7 +55,7 @@ export default class About extends React.Component
                         </table>
                     </details>
 
-                    <details>
+                    <details className="aboutDetails">
                         <summary>Professional experience</summary>
                         <table id="employmenttable" cellSpacing="5" cellPadding="5" width="90%" border={0}>
                         <tbody>
@@ -69,7 +69,7 @@ export default class About extends React.Component
                                         <li>Researched, diagnosed, troubleshooted, and identified solutions to resolve software application issues associated with Consilio’s web-based eDiscovery platform, “Sightline”.</li>
                                         <li>Collaborated with team members to maintain and improve the components of Sightline.</li>
                                         <li>Identified areas of improvement related to the efficiency of Sightline and saw it through all phases of the project lifecycle: requirements gathering, solution design, application development, and testing.</li>
-                                        <li>Leveraged agile methodologies like Scrum and full stack development in ASP.NET MVC, C#, JavaScript, and SQL to bring about solutions for law firms and their clients.</li>
+                                        <li>Leveraged agile methodologies like Scrum and full stack development in HTML, CSS, JavaScript, React, TypeScript, ASP.NET MVC, C#, and SQL to bring about solutions for law firms and their clients.</li>
                                     </ul>                        
                                 </td>
                             </tr>
@@ -80,9 +80,10 @@ export default class About extends React.Component
                                     <strong>Web Developer</strong>
                                     <br/>     
                                     <ul>
-                                        <li>New development and maintenance of ASP.NET web applications including applications built using MVC and Webforms frameworks; languages that include C#, VB.NET, JavaScript (Vanilla and jQuery), HTML, VBScript, and razor; and MySQL and Microsoft SQL Server databases for data storage.</li>
+                                        <li>New development and maintenance of ASP.NET web applications including applications built using MVC and Webforms frameworks; languages that include C#, VB.NET, JavaScript, HTML, VBScript, and razor; and MySQL and Microsoft SQL Server databases for data storage.</li>
                                         <li>Utilized Git and Subversion for Version Control.</li>
-                                        <li>Development of custom solutions related to proprietary web-based CMS called “<a href="https://www.spinutech.com/dev/cms/spinternet/" target="_blank" title="Content Management System (CMS) by Spinutech" rel="noopener noreferrer">Spinternet</a>”.</li>
+                                        {/* <li>Development of custom solutions related to proprietary web-based CMS called “<a href="https://www.spinutech.com/dev/cms/spinternet/" target="_blank" title="Content Management System (CMS) by Spinutech" rel="noopener noreferrer">Spinternet</a>”.</li> */}
+                                        <li>Development of custom solutions related to proprietary web-based CMS called “Spinternet”.</li>
                                         <li>Coordinated with Project Managers to deliver products and solutions to clients.</li>
                                         <li>Collaborated with other developers/team members to improve efficiency and timely delivery of solutions.</li>
                                         <li>Wrote clean, consistent code matching established guidelines and patterns.</li>
@@ -133,7 +134,7 @@ export default class About extends React.Component
                                     </ul>
                                 </td> 
                             </tr>
-                            <tr className="aboutTableRow">
+                            {/* <tr className="aboutTableRow">
                                 <td>2014</td> 
                                 <td>
                                     <strong>Northwestern Mutual &mdash; Milwaukee, WI</strong> 
@@ -146,12 +147,12 @@ export default class About extends React.Component
                                         <li>Used various Microsoft Office applications to collaborate and complete tasks.</li>
                                     </ul>
                                 </td> 
-                            </tr>
+                            </tr> */}
                         </tbody>
                         </table>
                     </details>
 
-                    <details>
+                    <details className="aboutDetails">
                         <summary>Skills</summary>
                         <table id="skillstable" cellSpacing="5" cellPadding="5" width="90%" border={0}>
                             <tbody>
@@ -235,7 +236,7 @@ export default class About extends React.Component
                                             <li className="floatinglist">Internet Information Services (IIS) Manager</li>
                                             <li className="floatinglist">SQL Server Management Studio</li>
                                             <li className="floatinglist">MySQL Workbench</li>
-                                            <li className="floatinglist">MongoDB Compass</li>
+                                            {/* <li className="floatinglist">MongoDB Compass</li> */}
                                             <li className="floatinglist">Notepad++</li>
                                             <li className="floatinglist">BeyondCompare</li>
                                             <li className="floatinglist">FileZilla</li>

@@ -48,6 +48,8 @@ nav{height: 35px;}
 
 #contactForm{padding-bottom: 150px;}
 
+/* #divAboutDetails{padding-left: 50px;} */
+
 #divAboutDetails td
 {
     border-style: solid;
@@ -106,6 +108,8 @@ nav{height: 35px;}
 {
   padding-top: 25px;
 }
+
+/* .aboutDetails{padding-bottom: 20px;} */
 
 .floatinglist 
 {
