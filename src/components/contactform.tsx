@@ -1,5 +1,5 @@
 import React from 'react';
-import jQueryConfirm from "./modal";
+import jQueryConfirm from "./modal.js";
 import {FormInput} from "./forminput.tsx";
 import {EmailRegex} from "../constants/regex.ts";
 
