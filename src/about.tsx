@@ -164,12 +164,12 @@ export default class About extends React.Component
                                 <tr>
                                     <td>
                                         <ul>                                            
-                                            <li className="floatinglist">HTML</li>
-                                            <li className="floatinglist">CSS</li>
-                                            <li className="floatinglist">JavaScript</li>
-                                            <li className="floatinglist">TypeScript</li>
-                                            <li className="floatinglist">C#</li>
-                                            <li className="floatinglist">Visual Basic</li>
+                                            <li className="floatingListItem">HTML</li>
+                                            <li className="floatingListItem">CSS</li>
+                                            <li className="floatingListItem">JavaScript</li>
+                                            <li className="floatingListItem">TypeScript</li>
+                                            <li className="floatingListItem">C#</li>
+                                            <li className="floatingListItem">Visual Basic</li>
                                         </ul>
                                     </td>
                                 </tr>
@@ -182,19 +182,19 @@ export default class About extends React.Component
                                 <tr>
                                     <td>
                                         <ul>
-                                            <li className="floatinglist">JavaScript Libraries
+                                            <li className="floatingListItem">JavaScript Libraries
                                                 <ul>
                                                     <li>React (this site is built using React)</li>
                                                     <li>jQuery</li>                                                    
                                                 </ul>
                                             </li>
-                                            <li className="floatinglist">ASP.NET
+                                            <li className="floatingListItem">ASP.NET
                                                 <ul>
                                                     <li>MVC</li>
                                                     <li>Web Forms</li>
                                                 </ul>
                                             </li>                                                                                        
-                                            <li className="floatinglist">nodeJS
+                                            <li className="floatingListItem">nodeJS
                                                 <ul>
                                                     <li>Frameworks/Libraries
                                                         <ul>
@@ -215,9 +215,9 @@ export default class About extends React.Component
                                 <tr>
                                     <td>
                                         <ul>
-                                            <li className="floatinglist">SQL Server</li>
-                                            <li className="floatinglist">MySQL</li>
-                                            <li className="floatinglist">MongoDB</li>
+                                            <li className="floatingListItem">SQL Server</li>
+                                            <li className="floatingListItem">MySQL</li>
+                                            <li className="floatingListItem">MongoDB</li>
                                         </ul>
                                     </td>
                                 </tr>
@@ -230,17 +230,17 @@ export default class About extends React.Component
                                 <tr>
                                     <td>
                                         <ul>
-                                            <li className="floatinglist">Visual Studio</li>
-                                            <li className="floatinglist">Visual Studio Code</li>
-                                            <li className="floatinglist">GitHub Desktop</li>
-                                            <li className="floatinglist">Internet Information Services (IIS) Manager</li>
-                                            <li className="floatinglist">SQL Server Management Studio</li>
-                                            <li className="floatinglist">MySQL Workbench</li>
-                                            {/* <li className="floatinglist">MongoDB Compass</li> */}
-                                            <li className="floatinglist">Notepad++</li>
-                                            <li className="floatinglist">BeyondCompare</li>
-                                            <li className="floatinglist">FileZilla</li>
-                                            <li className="floatinglist">Event Viewer</li>
+                                            <li className="floatingListItem">Visual Studio</li>
+                                            <li className="floatingListItem">Visual Studio Code</li>
+                                            <li className="floatingListItem">GitHub Desktop</li>
+                                            <li className="floatingListItem">Internet Information Services (IIS) Manager</li>
+                                            <li className="floatingListItem">SQL Server Management Studio</li>
+                                            <li className="floatingListItem">MySQL Workbench</li>
+                                            {/* <li className="floatingListItem">MongoDB Compass</li> */}
+                                            <li className="floatingListItem">Notepad++</li>
+                                            <li className="floatingListItem">BeyondCompare</li>
+                                            <li className="floatingListItem">FileZilla</li>
+                                            <li className="floatingListItem">Event Viewer</li>
                                         </ul>
                                     </td>
                                 </tr>
