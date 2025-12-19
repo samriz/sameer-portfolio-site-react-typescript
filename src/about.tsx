@@ -19,7 +19,7 @@ export default class About extends React.Component
                         <a href="https://www.linkedin.com/in/sameer-r-bb788375/" target="_blank" rel="noreferrer"><img src={LinkedInPicture} id="profilepic" className="center" title="Sameer Rizvi" alt="Sameer Rizvi" loading="lazy"/></a>
                         <figcaption>
                             <HashLink smooth to="/#contact" className="textlink" title="Contact">Contact Me</HashLink>
-                            <br></br>
+                            <br/>
                             <a href={"https://www.linkedin.com/in/sameer-r-bb788375/"} target={"_blank"} rel="noreferrer">LinkedIn <ExternalUrlArrow/></a>
                         </figcaption>
                     </figure>
@@ -324,11 +324,11 @@ export default class About extends React.Component
                             </table>      
                     </details> */}
                 </div>
-                <br></br>
+                <br/>
                 <div style={{textAlign: "center",}}>
                     <DownloadButton file={Resume} buttonText={"DOWNLOAD RESUME"}/>
-                    <br></br>
-                    <br></br>
+                    <br/>
+                    <br/>
                 </div>                
             </>
         }
