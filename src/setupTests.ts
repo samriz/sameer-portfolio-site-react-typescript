@@ -1,2 +1,2 @@
-// jest.setup.ts
+// setupTests.ts
 import '@testing-library/jest-dom';

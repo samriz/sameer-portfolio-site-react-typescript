@@ -10,6 +10,10 @@ describe('ContactForm', () => {
     render(<ContactForm/>);
 
     //use RTL's debug function to see rendered output of RTL's render function:
-    screen.debug();
+    //screen.debug();
+  });
+  test('find Invalid Email text', () => {
+    render(<ContactForm/>);
+    expect(screen.getByText('Invalid Email')).toBeInTheDocument();
   });
 });
