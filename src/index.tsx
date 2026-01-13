@@ -8,7 +8,7 @@ import About from "./about.tsx";
 import Contact from "./contact.tsx";
 import Footer from "./components/footer.tsx";
 import "./styles/index.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface IndexState
 {
