@@ -18,9 +18,9 @@ export default class About extends React.Component
                     <figure>
                         <a href="https://www.linkedin.com/in/sameer-r-bb788375/" target="_blank" rel="noreferrer"><img src={LinkedInPicture} id="profilepic" className="center" title="Sameer Rizvi" alt="Sameer Rizvi" loading="lazy"/></a>
                         <figcaption>
-                            <HashLink smooth to="/#contact" className="textlink" title="Contact">Contact Me</HashLink>
+                            <HashLink smooth to="/#contact" className="textlink" title="The Contact Page">Contact Me</HashLink>
                             <br/>
-                            <a href={"https://www.linkedin.com/in/sameer-r-bb788375/"} target={"_blank"} rel="noreferrer">LinkedIn <ExternalUrlArrow/></a>
+                            <a href={"https://www.linkedin.com/in/sameer-r-bb788375/"} target={"_blank"} rel="noreferrer" title="My LinkedIn Page">LinkedIn <ExternalUrlArrow/></a>
                         </figcaption>
                     </figure>
                 </>
