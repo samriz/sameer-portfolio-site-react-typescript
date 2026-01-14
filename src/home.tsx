@@ -24,16 +24,16 @@ export default class Home extends React.Component
                 <p>Welcome to my official Web Portfolio.</p>
                 <p>Here, you'll find information pertaining to my academic and professional experiences. This includes, but is not limited to, the following:</p>
                 <ul>
-                    <li>My <Link to={Resume} title={"Resume"} target={"_blank"} rel={"author"}>resume <ExternalUrlArrow/></Link>.</li>
+                    <li>My <Link to={Resume} title="Link to my Resume" target={"_blank"} rel={"author"}>resume <ExternalUrlArrow/></Link>.</li>
                     <li>An 
-                        <HashLink smooth to={"/#about"} title="About" rel="author"> about</HashLink> section, detailing my academic and professional history.
+                        <HashLink smooth to={"/#about"} title="The About Page" rel="author"> about</HashLink> section, detailing my academic and professional history.
                     </li>
-                    <li>My <a href={"https://github.com/samriz"} target={"_blank"} title={"GitHub"} rel={"noopener noreferrer"}>GitHub page <ExternalUrlArrow/></a>.</li>
-                    <li>A way to <HashLink smooth to={"/#contactMain"} title={"Contact"} rel={"author"}>contact</HashLink> me.</li>
+                    <li>My <a href={"https://github.com/samriz"} target={"_blank"} title="My GitHub Page" rel={"noopener noreferrer"}>GitHub page <ExternalUrlArrow/></a>.</li>
+                    <li>A way to <HashLink smooth to={"/#contactMain"} title="The Contact Page" rel={"author"}>contact</HashLink> me.</li>
                     {/* <li>
                         <HashLink smooth to={"/#summaryProfessionalSamples"} onClick={this.openProfessionalSamples}>Links</HashLink> to some of my professional work.
                     </li> */}
-                    <li>My code for this site can be found <a href="https://github.com/samriz/sameer-portfolio-site-react-typescript" target="_blank" title="Portfolio GitHub Repo" rel="noopener noreferrer">here <ExternalUrlArrow/></a>.</li>
+                    <li>My code for this site can be found on <a href="https://github.com/samriz/sameer-portfolio-site-react-typescript" target="_blank" title="Site's GitHub Repo" rel="noopener noreferrer">GitHub <ExternalUrlArrow/></a>.</li>
                 </ul>
             </div>
         );
