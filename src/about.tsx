@@ -156,11 +156,11 @@ export default class About extends React.Component
                         <summary>Skills</summary>
                         <table id="skillstable" cellSpacing="5" cellPadding="5" width="90%" border={0}>
                             <tbody>
-                                <thead>
+                                {/* <thead> */}
                                     <tr>
                                         <th>Programming and Scripting Languages</th>
                                     </tr>
-                                </thead>
+                                {/* </thead> */}
                                 <tr>
                                     <td>
                                         <ul>                                            
@@ -174,11 +174,11 @@ export default class About extends React.Component
                                     </td>
                                 </tr>
 
-                                <thead>
+                                {/* <thead> */}
                                     <tr>
                                         <th>Frameworks/Libraries/Runtimes</th>
                                     </tr>
-                                </thead>
+                                {/* </thead> */}
                                 <tr>
                                     <td>
                                         <ul>
@@ -207,11 +207,11 @@ export default class About extends React.Component
                                     </td>
                                 </tr>
 
-                                <thead>
+                                {/* <thead> */}
                                     <tr>
                                         <th>Databases</th>
                                     </tr>
-                                </thead>
+                                {/* </thead> */}
                                 <tr>
                                     <td>
                                         <ul>
@@ -222,11 +222,11 @@ export default class About extends React.Component
                                     </td>
                                 </tr>
 
-                                <thead>
+                                {/* <thead> */}
                                     <tr>
                                         <th>Tools</th>
                                     </tr>
-                                </thead>
+                                {/* </thead> */}
                                 <tr>
                                     <td>
                                         <ul>
