@@ -110,19 +110,19 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
                     body: formData
                 });
 
-                let modal = new jQueryConfirm();
+                let confirmObj = new jQueryConfirm();
                 if(response.ok) 
                 {
                     nameElement.value = "";
                     emailElement.value = "";
                     messageElement.value = "";
 
-                    modal.setModalContent("Message sent!");
+                    confirmObj.setModalContent("Message sent!");
                 }
-                else modal.setModalContent("Message could not be sent.");
+                else confirmObj.setModalContent("Message could not be sent.");
                 
-                modal.createModal();
-                modal.getModal().open();
+                confirmObj.createModal();
+                confirmObj.getModal().open();
             }
         }
         /* console.log("State name: " + this.state.name);
