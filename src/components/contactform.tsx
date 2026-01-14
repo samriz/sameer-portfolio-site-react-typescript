@@ -146,7 +146,7 @@ export default class ContactForm extends React.Component<{}, ContactFormState>
         if(email.length > 0)
         {
             validEmail = EmailRegex.test(email);
-            console.log("Valid email: " + validEmail);
+            //console.log("Valid email: " + validEmail);
         }
 
         let span = document.getElementById("spanInvalidEmail") as HTMLSpanElement;      
