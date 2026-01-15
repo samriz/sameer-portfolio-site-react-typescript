@@ -3,12 +3,13 @@
 interface DownloadButtonProps {
     file: any;
     buttonText: string;
+    downloadedFileName: string;
 }
 
-export function DownloadButton({file, buttonText}: DownloadButtonProps)
+export function DownloadButton({file, buttonText, downloadedFileName}: DownloadButtonProps)
 {
     return (
-        <button className={"leftPad roundedCorners"}><a href={file} download>{buttonText}</a></button>
+        <button className={"leftPad roundedCorners"}><a href={file} download={downloadedFileName}>{buttonText}</a></button>
     );
 }
 
@@ -23,6 +24,6 @@ export function DownloadButton({file, buttonText}: DownloadButtonProps)
     
     getResource = async (resource: any) => {
         const response = await fetch(resource);
-        await response.json();
+        const resourceBlob = await response.blob();
     }
 } */

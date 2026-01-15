@@ -326,7 +326,7 @@ export default class About extends React.Component
                 </div>
                 <br/>
                 <div style={{textAlign: "center",}}>
-                    <DownloadButton file={Resume} buttonText={"DOWNLOAD RESUME"}/>
+                    <DownloadButton file={Resume} buttonText={"DOWNLOAD RESUME"} downloadedFileName="SameerRizviResume.pdf"/>
                     <br/>
                     <br/>
                 </div>                
