@@ -96,11 +96,7 @@ export class FormInput extends React.Component<FormInputProps>
         }
     }
 
-    /**
-    * @param {string} type
-    * @returns boolean
-    */
-    isInputTypeValid = (type: string) => { return FormInput.inputTypes.includes(type.toLowerCase()); }
+    //isInputTypeValid = (type: string): boolean => { return FormInput.inputTypes.includes(type.toLowerCase()); }
 }
 
 /* export class EmailFormInput extends React.Component
